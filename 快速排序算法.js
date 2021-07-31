@@ -7,6 +7,7 @@ else{
     let right=[];
     for(let i=0;i<arr.length;i++){
         if(arr[i]<=p) { left.push(arr[i]) }
+        //这里使用<=号，是将那个p归并到left中，这样就不用操作三个数组的组合
         else{ right.push(arr[i])}
         }
     return qSort(left).concat(qSort(right))
